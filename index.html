@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Ascensão ∞</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+    }
+
+    header {
+      padding: 25px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      background: rgba(0,0,0,0.4);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      background: rgba(0,0,0,0.3);
+    }
+
+    nav button {
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      background: #6a5acd;
+      color: white;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>SISTEMA DE ASCENSÃO ∞</header>
+
+<nav>
+  <button onclick="mostrar('status')">Status</button>
+  <button onclick="mostrar('missao')">Missão</button>
+  <button onclick="mostrar('inspiracao')">Inspiração</button>
+</nav>
+
+<div class="container">
+
+  <div id="status" class="card">
+    <h2>Status</h2>
+    <p>Nível: <strong>1</strong></p>
+    <p>XP: <strong>0</strong></p>
+    <p>Força: <strong>1</strong></p>
+    <p>Resistência: <strong>1</strong></p>
+    <p>Mentalidade: <strong>1</strong></p>
+  </div>
+
+  <div id="missao" class="card" style="display:none">
+    <h2>Missão Diária</h2>
+    <p>Faça 30 flexões</p>
+    <button onclick="alert('Missão concluída! +10 XP')">Concluir</button>
+  </div>
+
+  <div id="inspiracao" class="card" style="display:none">
+    <h2>Inspiração</h2>
+    <iframe width="100%" height="315"
+      src="https://www.youtube.com/embed/6jUpXU9KxkA"
+      title="Anime Motivacional"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+</div>
+
+<script>
+  function mostrar(id) {
+    document.getElementById('status').style.display = 'none';
+    document.getElementById('missao').style.display = 'none';
+    document.getElementById('inspiracao').style.display = 'none';
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
